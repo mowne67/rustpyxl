@@ -1,0 +1,526 @@
+{
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "python": "3.14.5 (v3.14.5:5607950ef23, May 10 2026, 07:38:09) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "openpyxl": "3.1.5",
+    "rustpyxl": "0.1.0"
+  },
+  "rows": 100000,
+  "columns": 10,
+  "repeats": 3,
+  "batch_size": 1024,
+  "methodology": "Fresh subprocess per sample. Imports excluded from elapsed time, included in peak RSS. Streaming baselines; openpyxl at its default compression level 6, rustpyxl at its default level 4; complete read conversion and checksum; write generation, disk spooling, compression, save included. Warm OS cache. Order alternated. Exact SHA256 of rows from written workbooks verified outside timing. Numeric and mixed fixtures use inline strings; shared input has one unique 90+ character shared string per row. All output writers use inline strings.",
+  "results": [
+    {
+      "dataset": "numeric",
+      "operation": "read",
+      "engine": "openpyxl",
+      "mode": "row",
+      "median_seconds": 3.342435333877802,
+      "median_peak_rss_mib": 46.09375,
+      "samples": [
+        {
+          "seconds": 3.3397279158234596,
+          "peak_rss_mib": 45.984375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3140974
+        },
+        {
+          "seconds": 3.46963854203932,
+          "peak_rss_mib": 46.09375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3140974
+        },
+        {
+          "seconds": 3.342435333877802,
+          "peak_rss_mib": 46.171875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3140974
+        }
+      ]
+    },
+    {
+      "dataset": "numeric",
+      "operation": "read",
+      "engine": "rustpyxl",
+      "mode": "batch",
+      "median_seconds": 0.3274169168435037,
+      "median_peak_rss_mib": 32.703125,
+      "samples": [
+        {
+          "seconds": 0.32576437504030764,
+          "peak_rss_mib": 32.703125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3140974
+        },
+        {
+          "seconds": 0.3274169168435037,
+          "peak_rss_mib": 32.734375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3140974
+        },
+        {
+          "seconds": 0.3283204580657184,
+          "peak_rss_mib": 32.5625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3140974
+        }
+      ]
+    },
+    {
+      "dataset": "numeric",
+      "operation": "write",
+      "engine": "openpyxl",
+      "mode": "row",
+      "median_seconds": 5.069129750132561,
+      "median_peak_rss_mib": 36.890625,
+      "samples": [
+        {
+          "seconds": 5.069129750132561,
+          "peak_rss_mib": 36.9375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 3140975
+        },
+        {
+          "seconds": 5.047543166903779,
+          "peak_rss_mib": 36.828125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 3140974
+        },
+        {
+          "seconds": 5.335885250009596,
+          "peak_rss_mib": 36.890625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 3140974
+        }
+      ]
+    },
+    {
+      "dataset": "numeric",
+      "operation": "write",
+      "engine": "rustpyxl",
+      "mode": "row",
+      "median_seconds": 0.3395945830270648,
+      "median_peak_rss_mib": 31.140625,
+      "samples": [
+        {
+          "seconds": 0.3395945830270648,
+          "peak_rss_mib": 31.15625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 2940567
+        },
+        {
+          "seconds": 0.33657595817930996,
+          "peak_rss_mib": 30.984375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 2940567
+        },
+        {
+          "seconds": 0.47728304215706885,
+          "peak_rss_mib": 31.140625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 2940567
+        }
+      ]
+    },
+    {
+      "dataset": "numeric",
+      "operation": "write",
+      "engine": "rustpyxl",
+      "mode": "batch",
+      "median_seconds": 0.3145579171832651,
+      "median_peak_rss_mib": 32.65625,
+      "samples": [
+        {
+          "seconds": 0.3145579171832651,
+          "peak_rss_mib": 32.65625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 2940567
+        },
+        {
+          "seconds": 0.31308608292602,
+          "peak_rss_mib": 32.40625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 2940567
+        },
+        {
+          "seconds": 0.5427230829373002,
+          "peak_rss_mib": 33.140625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 2940567
+        }
+      ]
+    },
+    {
+      "dataset": "mixed",
+      "operation": "read",
+      "engine": "openpyxl",
+      "mode": "row",
+      "median_seconds": 4.920637041795999,
+      "median_peak_rss_mib": 47.125,
+      "samples": [
+        {
+          "seconds": 4.902258208021522,
+          "peak_rss_mib": 47.109375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286237
+        },
+        {
+          "seconds": 6.5490820000413805,
+          "peak_rss_mib": 47.265625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286237
+        },
+        {
+          "seconds": 4.920637041795999,
+          "peak_rss_mib": 47.125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286237
+        }
+      ]
+    },
+    {
+      "dataset": "mixed",
+      "operation": "read",
+      "engine": "rustpyxl",
+      "mode": "batch",
+      "median_seconds": 0.4893229999579489,
+      "median_peak_rss_mib": 32.765625,
+      "samples": [
+        {
+          "seconds": 0.4339835417922586,
+          "peak_rss_mib": 32.765625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286237
+        },
+        {
+          "seconds": 0.49605525005608797,
+          "peak_rss_mib": 32.9375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286237
+        },
+        {
+          "seconds": 0.4893229999579489,
+          "peak_rss_mib": 32.71875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286237
+        }
+      ]
+    },
+    {
+      "dataset": "mixed",
+      "operation": "write",
+      "engine": "openpyxl",
+      "mode": "row",
+      "median_seconds": 5.6775839168112725,
+      "median_peak_rss_mib": 37.0625,
+      "samples": [
+        {
+          "seconds": 5.6775839168112725,
+          "peak_rss_mib": 37.0625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4286236
+        },
+        {
+          "seconds": 6.61842408310622,
+          "peak_rss_mib": 37.1875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4286238
+        },
+        {
+          "seconds": 5.479851166950539,
+          "peak_rss_mib": 36.9375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4286237
+        }
+      ]
+    },
+    {
+      "dataset": "mixed",
+      "operation": "write",
+      "engine": "rustpyxl",
+      "mode": "row",
+      "median_seconds": 0.3627075420226902,
+      "median_peak_rss_mib": 31.1875,
+      "samples": [
+        {
+          "seconds": 0.3605612078681588,
+          "peak_rss_mib": 31.0625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4557748
+        },
+        {
+          "seconds": 0.4156758328899741,
+          "peak_rss_mib": 31.1875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4557748
+        },
+        {
+          "seconds": 0.3627075420226902,
+          "peak_rss_mib": 31.265625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4557748
+        }
+      ]
+    },
+    {
+      "dataset": "mixed",
+      "operation": "write",
+      "engine": "rustpyxl",
+      "mode": "batch",
+      "median_seconds": 0.3556604168843478,
+      "median_peak_rss_mib": 32.46875,
+      "samples": [
+        {
+          "seconds": 0.3556604168843478,
+          "peak_rss_mib": 32.46875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4557748
+        },
+        {
+          "seconds": 0.3672772089485079,
+          "peak_rss_mib": 32.71875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4557748
+        },
+        {
+          "seconds": 0.3321583750657737,
+          "peak_rss_mib": 32.3125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4557748
+        }
+      ]
+    },
+    {
+      "dataset": "shared",
+      "operation": "read",
+      "engine": "openpyxl",
+      "mode": "row",
+      "median_seconds": 3.747662124922499,
+      "median_peak_rss_mib": 62.25,
+      "samples": [
+        {
+          "seconds": 3.726369166979566,
+          "peak_rss_mib": 62.25,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084292
+        },
+        {
+          "seconds": 3.747662124922499,
+          "peak_rss_mib": 62.203125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084292
+        },
+        {
+          "seconds": 3.7695394998881966,
+          "peak_rss_mib": 62.25,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084292
+        }
+      ]
+    },
+    {
+      "dataset": "shared",
+      "operation": "read",
+      "engine": "rustpyxl",
+      "mode": "batch",
+      "median_seconds": 0.31198929203674197,
+      "median_peak_rss_mib": 46.578125,
+      "samples": [
+        {
+          "seconds": 0.3111745410133153,
+          "peak_rss_mib": 46.75,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084292
+        },
+        {
+          "seconds": 0.3127264578361064,
+          "peak_rss_mib": 46.578125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084292
+        },
+        {
+          "seconds": 0.31198929203674197,
+          "peak_rss_mib": 46.5625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084292
+        }
+      ]
+    },
+    {
+      "dataset": "shared",
+      "operation": "write",
+      "engine": "openpyxl",
+      "mode": "row",
+      "median_seconds": 5.146758042043075,
+      "median_peak_rss_mib": 37.046875,
+      "samples": [
+        {
+          "seconds": 5.146758042043075,
+          "peak_rss_mib": 37.046875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4093362
+        },
+        {
+          "seconds": 5.129287959076464,
+          "peak_rss_mib": 37.078125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4093361
+        },
+        {
+          "seconds": 5.192378374980763,
+          "peak_rss_mib": 36.875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4093361
+        }
+      ]
+    },
+    {
+      "dataset": "shared",
+      "operation": "write",
+      "engine": "rustpyxl",
+      "mode": "row",
+      "median_seconds": 0.37270962493494153,
+      "median_peak_rss_mib": 31.109375,
+      "samples": [
+        {
+          "seconds": 0.37270962493494153,
+          "peak_rss_mib": 31.109375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4122708
+        },
+        {
+          "seconds": 0.3670440830755979,
+          "peak_rss_mib": 31.046875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4122708
+        },
+        {
+          "seconds": 0.37514183297753334,
+          "peak_rss_mib": 31.1875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4122708
+        }
+      ]
+    },
+    {
+      "dataset": "shared",
+      "operation": "write",
+      "engine": "rustpyxl",
+      "mode": "batch",
+      "median_seconds": 0.3436285830102861,
+      "median_peak_rss_mib": 32.921875,
+      "samples": [
+        {
+          "seconds": 0.34699233318679035,
+          "peak_rss_mib": 32.921875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4122708
+        },
+        {
+          "seconds": 0.3424153330270201,
+          "peak_rss_mib": 33.046875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4122708
+        },
+        {
+          "seconds": 0.3436285830102861,
+          "peak_rss_mib": 32.8125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": null,
+          "file_bytes": 4122708
+        }
+      ]
+    }
+  ]
+}

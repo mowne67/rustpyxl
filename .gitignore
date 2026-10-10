@@ -1,0 +1,10 @@
+/target/
+__pycache__/
+.pytest_cache/
+*.so
+*.xlsx
+*.egg-info/
+
+.venv/
+dist/
+.DS_Store

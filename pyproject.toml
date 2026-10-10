@@ -1,0 +1,20 @@
+[build-system]
+requires = ["maturin>=1.9,<2"]
+build-backend = "maturin"
+
+[project]
+name = "rustpyxl"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "A streaming Rust XLSX engine with a familiar Python API"
+license = "MIT"
+
+[project.optional-dependencies]
+compat = ["openpyxl==3.1.5"]
+
+[tool.maturin]
+features = ["python"]
+python-source = "python"
+module-name = "rustpyxl._native"
+include = [{ path = "THIRD_PARTY_NOTICES.md", format = ["sdist", "wheel"] }]
+

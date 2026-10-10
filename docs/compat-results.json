@@ -1,0 +1,203 @@
+{
+  "rows": 100000,
+  "columns": 10,
+  "repeats": 3,
+  "python": "3.14.5 (v3.14.5:5607950ef23, May 10 2026, 07:38:09) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "openpyxl": "3.1.5",
+  "methodology": "Fresh subprocess per read, imports excluded from time and included in process peak RSS. Full reference workbook construction plus native acceleration included. Explicit accurate worksheet dimensions, warm filesystem cache, alternating engine order, equal row/cell counts and checksum checked. Unique shared-string dataset holds one 90+ character string per row. Mutable/writing compatibility uses unmodified openpyxl and is not accelerated.",
+  "results": [
+    {
+      "dataset": "numeric",
+      "engine": "openpyxl",
+      "median_seconds": 2.220040707848966,
+      "median_peak_rss_mib": 46.15625,
+      "samples": [
+        {
+          "seconds": 2.2804675840307027,
+          "peak_rss_mib": 46.1875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3141002
+        },
+        {
+          "seconds": 2.220040707848966,
+          "peak_rss_mib": 46.15625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3141002
+        },
+        {
+          "seconds": 2.1880974578671157,
+          "peak_rss_mib": 46.0,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3141002
+        }
+      ]
+    },
+    {
+      "dataset": "numeric",
+      "engine": "compat",
+      "median_seconds": 0.3404434169642627,
+      "median_peak_rss_mib": 39.296875,
+      "samples": [
+        {
+          "seconds": 0.39082916593179107,
+          "peak_rss_mib": 40.078125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3141002
+        },
+        {
+          "seconds": 0.3404434169642627,
+          "peak_rss_mib": 39.265625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3141002
+        },
+        {
+          "seconds": 0.3124434160999954,
+          "peak_rss_mib": 39.296875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 499999500000,
+          "file_bytes": 3141002
+        }
+      ]
+    },
+    {
+      "dataset": "mixed",
+      "engine": "openpyxl",
+      "median_seconds": 3.5431176251731813,
+      "median_peak_rss_mib": 46.15625,
+      "samples": [
+        {
+          "seconds": 3.5434085831511766,
+          "peak_rss_mib": 46.1875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286263
+        },
+        {
+          "seconds": 3.531958249863237,
+          "peak_rss_mib": 46.15625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286263
+        },
+        {
+          "seconds": 3.5431176251731813,
+          "peak_rss_mib": 46.015625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286263
+        }
+      ]
+    },
+    {
+      "dataset": "mixed",
+      "engine": "compat",
+      "median_seconds": 0.4289935831911862,
+      "median_peak_rss_mib": 39.640625,
+      "samples": [
+        {
+          "seconds": 0.41944666602648795,
+          "peak_rss_mib": 39.59375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286263
+        },
+        {
+          "seconds": 0.4289935831911862,
+          "peak_rss_mib": 39.71875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286263
+        },
+        {
+          "seconds": 0.43244654196314514,
+          "peak_rss_mib": 39.640625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 5317076390,
+          "file_bytes": 4286263
+        }
+      ]
+    },
+    {
+      "dataset": "shared",
+      "engine": "openpyxl",
+      "median_seconds": 2.598793791141361,
+      "median_peak_rss_mib": 61.578125,
+      "samples": [
+        {
+          "seconds": 2.7068226251285523,
+          "peak_rss_mib": 61.578125,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084335
+        },
+        {
+          "seconds": 2.598793791141361,
+          "peak_rss_mib": 61.25,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084335
+        },
+        {
+          "seconds": 2.596170667093247,
+          "peak_rss_mib": 61.59375,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084335
+        }
+      ]
+    },
+    {
+      "dataset": "shared",
+      "engine": "compat",
+      "median_seconds": 0.299643374979496,
+      "median_peak_rss_mib": 54.640625,
+      "samples": [
+        {
+          "seconds": 0.300556416856125,
+          "peak_rss_mib": 54.640625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084335
+        },
+        {
+          "seconds": 0.29934999998658895,
+          "peak_rss_mib": 54.5625,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084335
+        },
+        {
+          "seconds": 0.299643374979496,
+          "peak_rss_mib": 54.6875,
+          "rows": 100000,
+          "cells": 1000000,
+          "checksum": 45014038890,
+          "file_bytes": 4084335
+        }
+      ]
+    }
+  ]
+}
